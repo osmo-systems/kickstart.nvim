@@ -233,6 +233,10 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+vim.opt.tabstop = 2 -- If there are tabs, show them as 2 wide
+vim.opt.shiftwidth = 2 -- Indent operations use 2 spaces
+vim.opt.expandtab = true -- Always use spaces
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -246,7 +250,7 @@ rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  -- 'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
