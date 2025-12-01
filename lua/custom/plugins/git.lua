@@ -37,6 +37,23 @@ return {
       'DiffviewFocusFiles',
       'DiffviewFileHistory',
     },
+    keys = {
+      {
+        '<leader>gd',
+        function()
+          local branch = vim.fn.input 'Branch name: '
+          if branch ~= '' then
+            vim.cmd('DiffviewOpen ' .. branch)
+          end
+        end,
+        desc = 'Diffview Open [branch]',
+      },
+      {
+        '<leader>gdc',
+        '<cmd>DiffviewClose<cr>',
+        desc = 'Diffview Close',
+      },
+    },
     opts = {
       view = {
         merge_tool = {
