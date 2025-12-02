@@ -40,13 +40,8 @@ return {
     keys = {
       {
         '<leader>gd',
-        function()
-          local branch = vim.fn.input 'Branch name: '
-          if branch ~= '' then
-            vim.cmd('DiffviewOpen ' .. branch)
-          end
-        end,
-        desc = 'Diffview Open [branch]',
+        ':DiffviewOpen ',
+        desc = 'Diffview Open',
       },
       {
         '<leader>gdc',
